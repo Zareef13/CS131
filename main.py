@@ -4,7 +4,10 @@ from pathlib import Path
 import numpy as np
 
 
-DATA_PATH = Path("data/car.MP4")
+VIDEO_PATHS = [
+    Path("data/car.MP4"),
+    Path("data/Drone.mp4"),
+]
 OUTPUT_DIR = Path("outputs")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
@@ -153,8 +156,8 @@ def compute_hybrid_risk(frame1, frame2):
     }
 
 
-def save_sample_frames(frames):
-    indices = [ 0, 40, 80, 120 , 160]
+def save_sample_frames(frames, output_prefix):
+    indices = [0, 40, 80, 120, 160]
     num_images = len(indices)
 
     fig, axes = plt.subplots(1, num_images, figsize=(4 * num_images, 5))
@@ -170,11 +173,11 @@ def save_sample_frames(frames):
         axes[i].axis("off")
 
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "sample_frames.png")
+    plt.savefig(OUTPUT_DIR / f"{output_prefix}_sample_frames.png")
     plt.close()
 
 
-def save_edge_demo(frames):
+def save_edge_demo(frames, output_prefix):
     frame = frames[min(40, len(frames) - 1)]
     gray, blurred = preprocess_frame(frame)
     edges = cv2.Canny(blurred, 50, 150)
@@ -194,11 +197,11 @@ def save_edge_demo(frames):
     axes[2].axis("off")
 
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "edge_demo.png")
+    plt.savefig(OUTPUT_DIR / f"{output_prefix}_edge_demo.png")
     plt.close()
 
 
-def save_hough_demo(frames):
+def save_hough_demo(frames, output_prefix):
     frame = frames[min(40, len(frames) - 1)]
     gray, blurred = preprocess_frame(frame)
     edges = cv2.Canny(blurred, 50, 150)
@@ -234,11 +237,11 @@ def save_hough_demo(frames):
     axes[2].axis("off")
 
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "hough_demo.png")
+    plt.savefig(OUTPUT_DIR / f"{output_prefix}_hough_demo.png")
     plt.close()
 
 
-def save_optical_flow_demo(frames):
+def save_optical_flow_demo(frames, output_prefix):
     idx = min(40, len(frames) - 2)
     frame1 = frames[idx]
     frame2 = frames[idx + 1]
@@ -262,11 +265,11 @@ def save_optical_flow_demo(frames):
     axes[2].axis("off")
 
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "optical_flow_demo.png")
+    plt.savefig(OUTPUT_DIR / f"{output_prefix}_optical_flow_demo.png")
     plt.close()
 
 
-def save_risk_overlay_demo(frames):
+def save_risk_overlay_demo(frames, output_prefix):
     idx = min(40, len(frames) - 2)
     result = compute_hybrid_risk(frames[idx], frames[idx + 1])
 
@@ -289,17 +292,17 @@ def save_risk_overlay_demo(frames):
     axes[3].axis("off")
 
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "risk_overlay_frame_40.png")
+    plt.savefig(OUTPUT_DIR / f"{output_prefix}_risk_overlay_frame_40.png")
     plt.close()
 
 
-def save_risk_overlay_video(frames):
+def save_risk_overlay_video(frames, output_prefix):
     if len(frames) < 2:
         print("Need at least 2 frames to create risk overlay video.")
         return
 
     h, w = frames[0].shape[:2]
-    output_path = OUTPUT_DIR / "risk_overlay_video.mp4"
+    output_path = OUTPUT_DIR / f"{output_prefix}_risk_overlay_video.mp4"
 
     fourcc = cv2.VideoWriter_fourcc(*"mp4v")
     writer = cv2.VideoWriter(str(output_path), fourcc, 20, (w, h))
@@ -321,34 +324,40 @@ def save_risk_overlay_video(frames):
 
 
 def main():
-    frames = load_video_frames(DATA_PATH)
+    for video_path in VIDEO_PATHS:
+        output_prefix = video_path.stem.lower()
 
-    print("Loaded frames:", len(frames))
-    print("Starting processing...")
+        print("====================================")
+        print("Processing:", video_path)
+        print("Output prefix:", output_prefix)
 
-    if len(frames) == 0:
-        print("No frames loaded. Check the video path.")
-        return
+        frames = load_video_frames(video_path)
 
-    print("Frame shape:", frames[0].shape)
+        print("Loaded frames:", len(frames))
 
-    save_sample_frames(frames)
-    print("Saved outputs/sample_frames.png")
+        if len(frames) == 0:
+            print("No frames loaded. Check the video path.")
+            continue
 
-    save_edge_demo(frames)
-    print("Saved outputs/edge_demo.png")
+        print("Frame shape:", frames[0].shape)
 
-    save_hough_demo(frames)
-    print("Saved outputs/hough_demo.png")
+        save_sample_frames(frames, output_prefix)
+        print(f"Saved outputs/{output_prefix}_sample_frames.png")
 
-    save_optical_flow_demo(frames)
-    print("Saved outputs/optical_flow_demo.png")
+        save_edge_demo(frames, output_prefix)
+        print(f"Saved outputs/{output_prefix}_edge_demo.png")
 
-    save_risk_overlay_demo(frames)
-    print("Saved outputs/risk_overlay_frame_40.png")
+        save_hough_demo(frames, output_prefix)
+        print(f"Saved outputs/{output_prefix}_hough_demo.png")
 
-    save_risk_overlay_video(frames)
-    print("Saved outputs/risk_overlay_video.mp4")
+        save_optical_flow_demo(frames, output_prefix)
+        print(f"Saved outputs/{output_prefix}_optical_flow_demo.png")
+
+        save_risk_overlay_demo(frames, output_prefix)
+        print(f"Saved outputs/{output_prefix}_risk_overlay_frame_40.png")
+
+        save_risk_overlay_video(frames, output_prefix)
+        print(f"Saved outputs/{output_prefix}_risk_overlay_video.mp4")
 
 
 if __name__ == "__main__":
