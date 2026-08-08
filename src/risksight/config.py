@@ -1,0 +1,32 @@
+"""Algorithm constants for the RiskSight pipeline.
+
+These values match the original CS131 prototype and are intentionally kept in
+one place so experiments do not silently change the default behavior.
+"""
+
+RESIZE_WIDTH = 640
+
+CANNY_LOW_THRESHOLD = 50
+CANNY_HIGH_THRESHOLD = 150
+
+HOUGH_RHO = 1
+HOUGH_THETA_DIVISOR = 180
+HOUGH_THRESHOLD = 80
+HOUGH_MIN_LINE_LENGTH = 60
+HOUGH_MAX_LINE_GAP = 10
+
+FLOW_PYR_SCALE = 0.5
+FLOW_LEVELS = 3
+FLOW_WINDOW_SIZE = 21
+FLOW_ITERATIONS = 3
+FLOW_POLY_N = 7
+FLOW_POLY_SIGMA = 1.5
+
+MOTION_WEIGHT = 0.70
+EDGE_WEIGHT = 0.20
+LINE_WEIGHT = 0.10
+RISK_PERCENTILE = 45
+
+OUTPUT_FPS = 20
+DEMO_FRAME_INDEX = 40
+SAMPLE_FRAME_INDICES = (0, 40, 80, 120, 160)

@@ -5,7 +5,17 @@ __pycache__/
 
 data/
 outputs/
+!outputs/
+outputs/*
+!outputs/car_risk_overlay_frame_40.png
+!outputs/drone_risk_overlay_frame_40.png
 
 *.mp4
 *.mov
 *.avi
+
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.coverage

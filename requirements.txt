@@ -1,0 +1,5 @@
+# Convenience dependency list for quick installation.
+# The project metadata and authoritative dependency definitions live in pyproject.toml.
+matplotlib>=3.8,<4
+numpy>=1.26,<3
+opencv-python>=4.9,<5
