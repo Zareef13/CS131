@@ -4,16 +4,39 @@
 
 ## Demo
 
-<p align="center">
-  <img src="assets/car_demo.gif" alt="RiskSight vehicle interior demo" width="48%">
-  <img src="assets/drone_demo.gif" alt="RiskSight FPV drone demo" width="48%">
-</p>
+### Vehicle Interior
 
-<p align="center">
-  <sub>Vehicle Interior</sub>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <sub>FPV Drone</sub>
-</p>
+<table>
+  <tr>
+    <th>Original</th>
+    <th>RiskSight</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="assets/vehicle_original.gif" alt="Original vehicle interior footage" width="100%">
+    </td>
+    <td width="50%">
+      <img src="assets/vehicle_risksight.gif" alt="RiskSight vehicle interior overlay" width="100%">
+    </td>
+  </tr>
+</table>
+
+### FPV Drone
+
+<table>
+  <tr>
+    <th>Original</th>
+    <th>RiskSight</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="assets/drone_original.gif" alt="Original FPV drone footage" width="100%">
+    </td>
+    <td width="50%">
+      <img src="assets/drone_risksight.gif" alt="RiskSight FPV drone overlay" width="100%">
+    </td>
+  </tr>
+</table>
 
 ![RiskSight overlay on an industrial FPV scene](outputs/drone_risk_overlay_frame_40.png)
 
