@@ -75,6 +75,23 @@ Motion is the dominant cue. Edges reinforce local boundaries, while Hough lines 
 
 The industrial FPV sequence is the primary navigation use case. The vehicle interior provides a structurally different scene in which to inspect the same unchanged parameters. Both examples show the complete progression from input frame to motion score, fused map, and overlay. They are qualitative examples—not a benchmark or evidence of calibrated generalization.
 
+### Vehicle Interior Video
+
+<table>
+  <tr>
+    <th>Original</th>
+    <th>RiskSight</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="assets/vehicle_original.gif" alt="Original vehicle interior footage" width="100%">
+    </td>
+    <td width="50%">
+      <img src="assets/vehicle_risksight.gif" alt="RiskSight vehicle interior overlay" width="100%">
+    </td>
+  </tr>
+</table>
+
 ## Failure Case: Textured Open Environments
 
 <p align="center">
