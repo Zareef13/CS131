@@ -38,11 +38,9 @@
   </tr>
 </table>
 
-![RiskSight overlay on an industrial FPV scene](outputs/drone_risk_overlay_frame_40.png)
+FPV pilots navigate cluttered environments from a single forward-facing camera, where nearby structures can be difficult to judge at speed. RiskSight explores whether lightweight, interpretable visual cues can highlight obstacle-dense regions without stereo depth, LiDAR, training data, or a learned model. Its output is a **heuristic visual risk score**, not a calibrated probability of danger or a replacement for flight-safety systems.
 
-RiskSight explores whether useful obstacle-awareness cues can be recovered from a single forward-facing camera when stereo depth, LiDAR, and learned depth models are unavailable. Its output is a **heuristic visual risk score**, not a calibrated probability of danger or a replacement for flight-safety systems.
-
-## Pipeline
+## How RiskSight Works
 
 ```text
 video → resize/grayscale/blur → Canny edges ─┐
@@ -50,22 +48,43 @@ video → resize/grayscale/blur → Canny edges ─┐
                   dense Farneback flow ─────┘
 ```
 
-The fusion preserves the original project settings:
+### 1. Structural preprocessing
+
+<p align="center">
+  <img src="assets/pipeline_edges.png" alt="Original drone frame, blurred grayscale frame, and Canny edge map" width="100%">
+</p>
+
+Each RGB frame is resized, converted to grayscale, and blurred with a Gaussian kernel to reduce image noise. Canny edge detection then extracts object contours and structural boundaries; dilation and smoothing expand those thin responses into an edge-influence map for fusion.
+
+### 2. Dominant geometry
+
+<p align="center">
+  <img src="assets/pipeline_hough.png" alt="Canny edges and detected Hough lines in an FPV drone frame" width="100%">
+</p>
+
+The Probabilistic Hough Transform detects dominant linear structures in the edge map. These lines can correspond to walls, poles, pipes, beams, rooflines, and other elongated geometry that may matter during navigation.
+
+### 3. Apparent motion
+
+<p align="center">
+  <img src="assets/pipeline_flow.png" alt="Consecutive FPV drone frames and dense optical-flow magnitude" width="100%">
+</p>
+
+Dense Farneback optical flow estimates pixel motion between consecutive grayscale frames. The normalized magnitude map emphasizes strong apparent motion, but it also includes motion caused by the drone's own camera—an important limitation rather than a direct measurement of depth.
+
+### 4. Risk fusion
+
+<p align="center">
+  <img src="assets/pipeline_fusion.png" alt="Original FPV frame, motion score, fused risk map, and final RiskSight overlay" width="100%">
+</p>
+
+The normalized motion, edge, and line maps are combined using the implementation's fixed heuristic:
 
 ```text
 risk = 0.70 × motion + 0.20 × edges + 0.10 × lines
 ```
 
-- **Canny edge detection** finds local boundaries and contours.
-- **Probabilistic Hough lines** emphasize elongated structures such as walls, poles, pipes, and building edges.
-- **Dense Farneback optical flow** measures frame-to-frame apparent motion.
-- **Risk fusion** combines the normalized maps, removes responses below the 45th percentile, smooths the result, and overlays a heatmap on the RGB frame.
-
-## Results
-
-The repository includes examples from an industrial flight and a flight through a vehicle interior. A run produces sample frames, edge/Hough/flow visualizations, a four-panel risk-map demo, and an MP4 overlay for each input.
-
-![RiskSight overlay inside a vehicle](outputs/car_risk_overlay_frame_40.png)
+Responses below the 45th percentile are suppressed, then the map is smoothed, converted to a heatmap, and blended with the original frame. The FPV sequence demonstrates the primary navigation use case; the vehicle-interior demo shows the same pipeline operating in a second, structurally different environment. Evaluation is qualitative—no calibrated safety or depth benchmark is claimed.
 
 ## Setup
 
