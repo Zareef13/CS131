@@ -1,0 +1,82 @@
+{
+  "payload": {
+    "frame_usable_for_annotation": true,
+    "exclusion_reason": "",
+    "frame_has_relevant_obstacle": true,
+    "obstacles": [
+      {
+        "label": "wall",
+        "relevance": "high",
+        "forward_path_reason": "Large concrete wall directly in the path forward, narrowing the flight corridor between buildings.",
+        "box": [
+          0.484,
+          0.544,
+          0.928,
+          0.921
+        ],
+        "point": [
+          0.654,
+          0.713
+        ],
+        "confidence": 0.95
+      },
+      {
+        "label": "building",
+        "relevance": "medium",
+        "forward_path_reason": "Brick building facade on the left directly borders the potential flight path.",
+        "box": [
+          0.0,
+          0.0,
+          0.585,
+          0.765
+        ],
+        "point": [
+          0.258,
+          0.354
+        ],
+        "confidence": 0.98
+      },
+      {
+        "label": "building",
+        "relevance": "medium",
+        "forward_path_reason": "Brick building facade on the right obstructs the right side of the flight path.",
+        "box": [
+          0.705,
+          0.0,
+          1.0,
+          0.676
+        ],
+        "point": [
+          0.864,
+          0.292
+        ],
+        "confidence": 0.98
+      },
+      {
+        "label": "rubble",
+        "relevance": "low",
+        "forward_path_reason": "Heap of debris occupies the lower central area, restricting flight altitude.",
+        "box": [
+          0.149,
+          0.709,
+          0.62,
+          1.0
+        ],
+        "point": [
+          0.388,
+          0.851
+        ],
+        "confidence": 0.85
+      }
+    ],
+    "normalization_warnings": [
+      "usable_frame:cleared_exclusion_reason"
+    ]
+  },
+  "model": "gemini-3.1-flash-lite",
+  "prompt": "Annotate a frame only if it is a usable forward-facing FPV navigation view. Mark it unusable if a pause/menu/map/HUD panel obscures the scene, the camera is an exterior side view of a vehicle, a passenger/window view, a static scenic shot, or otherwise not a forward navigation view. For an unusable frame return no obstacles and give a short exclusion reason.\n\nFor a usable frame, identify at most four visible solid obstacles that intersect or materially narrow the drone's current or near-future forward flight corridor. Include walls, pillars, bridge supports, directly blocking building faces, vehicles, poles, trunks, large branches, barriers, fences, beams, gates, and large rocks only when they are actually in that corridor. Exclude sky, water unless descending into it, shadows, reflections, texture boundaries, distant/off-path scenery, whole side/background buildings, open ground, roads, grass, and HUD overlays. Do not select an object merely because it has edges or motion. Give a short forward-path reason for each object. Return structured JSON only. Coordinates must be decimal fractions from 0.0 to 1.0 (never 0 to 1000): box [x_min,y_min,x_max,y_max] and positive point [x,y] inside the object. Do not return polygons or reasoning beyond the requested short fields.",
+  "latency_seconds": 3.0820992499939166,
+  "input_tokens": 1357,
+  "output_tokens": 607,
+  "cost_usd": 0.00124975
+}

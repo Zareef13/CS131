@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 662,
+  "source_frame": "annotations_ai_50/drone/frame_0662.png",
+  "mask": "annotations_ai_50/drone/frame_0662_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "pillar",
+      "relevance": "high",
+      "forward_path_reason": "Large structural pillar directly in the left foreground and obstructing the flight path.",
+      "box": [
+        0,
+        0,
+        0.413,
+        1
+      ],
+      "point": [
+        0.205,
+        0.511
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        0,
+        0,
+        713,
+        1115
+      ],
+      "point_pixels": [
+        354,
+        570
+      ],
+      "sam_candidate_scores": [
+        0.48047125339508057,
+        0.8485002517700195,
+        0.8523622751235962
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.8523622751235962,
+      "sam_inference_seconds": 0.6962514170154463,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0662_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 421503,
+      "mask_area_fraction": 0.21857109966148944
+    },
+    {
+      "label": "pillar",
+      "relevance": "high",
+      "forward_path_reason": "Large structural pillar in the right foreground creating a narrow passage.",
+      "box": [
+        0.7337,
+        0.003,
+        0.8966,
+        0.8396
+      ],
+      "point": [
+        0.817,
+        0.457
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        1267,
+        3,
+        1548,
+        936
+      ],
+      "point_pixels": [
+        1411,
+        510
+      ],
+      "sam_candidate_scores": [
+        0.9471315741539001,
+        0.907713770866394,
+        0.9394212365150452
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9471315741539001,
+      "sam_inference_seconds": 0.8257622920209542,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0662_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 186191,
+      "mask_area_fraction": 0.09654966065976371
+    },
+    {
+      "label": "fence",
+      "relevance": "medium",
+      "forward_path_reason": "Metal barrier fence directly in the forward path blocking access to the area behind.",
+      "box": [
+        0.5275,
+        0.5642,
+        0.7251,
+        0.7177
+      ],
+      "point": [
+        0.627,
+        0.641
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        911,
+        629,
+        1252,
+        800
+      ],
+      "point_pixels": [
+        1083,
+        715
+      ],
+      "sam_candidate_scores": [
+        0.7660017609596252,
+        0.8934152126312256,
+        0.8905368447303772
+      ],
+      "sam_model_top_index": 1,
+      "sam_selected_index": 1,
+      "sam_mask_score": 0.8934152126312256,
+      "sam_inference_seconds": 0.8184320830041543,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0662_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 23978,
+      "mask_area_fraction": 0.012433832802336387
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.32755459312358953
+}

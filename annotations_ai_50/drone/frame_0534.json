@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 534,
+  "source_frame": "annotations_ai_50/drone/frame_0534.png",
+  "mask": "annotations_ai_50/drone/frame_0534_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "pillars",
+      "relevance": "high",
+      "forward_path_reason": "The concrete pillars form a structural barrier directly in the path of navigation.",
+      "box": [
+        0.57958,
+        0.43164,
+        0.99805,
+        0.92871
+      ],
+      "point": [
+        0.82227,
+        0.66602
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        1001,
+        481,
+        1724,
+        1036
+      ],
+      "point_pixels": [
+        1420,
+        743
+      ],
+      "sam_candidate_scores": [
+        0.8279596567153931,
+        0.696141242980957,
+        0.7880997657775879
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.8279596567153931,
+      "sam_inference_seconds": 0.6805144999816548,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0534_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 196458,
+      "mask_area_fraction": 0.10187363102349661
+    },
+    {
+      "label": "bridge support structure",
+      "relevance": "high",
+      "forward_path_reason": "The overhead metal frame and concrete support structure directly impede the upper airspace of the flight path.",
+      "box": [
+        0.58008,
+        0.0,
+        0.93359,
+        0.44531
+      ],
+      "point": [
+        0.73633,
+        0.1709
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        1002,
+        0,
+        1612,
+        497
+      ],
+      "point_pixels": [
+        1272,
+        191
+      ],
+      "sam_candidate_scores": [
+        0.7426593899726868,
+        0.6764532923698425,
+        0.8077071905136108
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.8077071905136108,
+      "sam_inference_seconds": 0.6752537910069805,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0534_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 106754,
+      "mask_area_fraction": 0.055357468803929374
+    },
+    {
+      "label": "wall",
+      "relevance": "medium",
+      "forward_path_reason": "The concrete retaining wall defines the right boundary and limits the navigation corridor.",
+      "box": [
+        0.35449,
+        0.43359,
+        0.58105,
+        0.59277
+      ],
+      "point": [
+        0.4502,
+        0.51074
+      ],
+      "confidence": 0.9,
+      "box_pixels": [
+        612,
+        483,
+        1003,
+        661
+      ],
+      "point_pixels": [
+        777,
+        569
+      ],
+      "sam_candidate_scores": [
+        0.5321320295333862,
+        0.391205757856369,
+        0.5079171657562256
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.5321320295333862,
+      "sam_inference_seconds": 0.675601374998223,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0534_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 51037,
+      "mask_area_fraction": 0.026465323410327892
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.18369642323775387
+}

@@ -1,0 +1,142 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 50,
+  "source_frame": "annotations_ai_50/drone/frame_0050.png",
+  "mask": "annotations_ai_50/drone/frame_0050_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "metal building bridge",
+      "relevance": "high",
+      "forward_path_reason": "Suspended bridge structure occupies the center of the forward flight path.",
+      "box": [
+        0.22705,
+        0.0,
+        0.71706,
+        0.31614
+      ],
+      "point": [
+        0.46938,
+        0.17051
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        392,
+        0,
+        1238,
+        352
+      ],
+      "point_pixels": [
+        811,
+        190
+      ],
+      "sam_candidate_scores": [
+        0.8384641408920288,
+        0.6551479697227478,
+        0.7375501990318298
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.8384641408920288,
+      "sam_inference_seconds": 0.6292462499986868,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0050_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 151802,
+      "mask_area_fraction": 0.07871718604805522
+    },
+    {
+      "label": "roof edge",
+      "relevance": "high",
+      "forward_path_reason": "The roof in the foreground on the right side restricts the flight corridor.",
+      "box": [
+        0.48465,
+        0.42494,
+        1.0,
+        1.0
+      ],
+      "point": [
+        0.75306,
+        0.70706
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        837,
+        474,
+        1727,
+        1115
+      ],
+      "point_pixels": [
+        1301,
+        788
+      ],
+      "sam_candidate_scores": [
+        0.9828519821166992,
+        0.9611863493919373,
+        0.9870536923408508
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9870536923408508,
+      "sam_inference_seconds": 0.6337613750074524,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0050_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 524032,
+      "mask_area_fraction": 0.27173768750829685
+    },
+    {
+      "label": "building wall",
+      "relevance": "high",
+      "forward_path_reason": "The brick building on the left constricts the left side of the narrow corridor.",
+      "box": [
+        0.0,
+        0.0,
+        0.38829,
+        0.98824
+      ],
+      "point": [
+        0.16212,
+        0.49882
+      ],
+      "confidence": 0.96,
+      "box_pixels": [
+        0,
+        0,
+        671,
+        1102
+      ],
+      "point_pixels": [
+        280,
+        556
+      ],
+      "sam_candidate_scores": [
+        0.949364960193634,
+        0.8244370222091675,
+        0.944532036781311
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.949364960193634,
+      "sam_inference_seconds": 0.6280210420081858,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0050_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 569085,
+      "mask_area_fraction": 0.29509999751095184
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": false,
+  "flagged_for_review": true,
+  "review_reasons": [
+    "merged_mask_over_50_percent"
+  ],
+  "final_mask_area_fraction": 0.6362266444311695
+}

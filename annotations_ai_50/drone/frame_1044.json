@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 1044,
+  "source_frame": "annotations_ai_50/drone/frame_1044.png",
+  "mask": "annotations_ai_50/drone/frame_1044_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "vertical wooden structure",
+      "relevance": "high",
+      "forward_path_reason": "Directly in front of the flight path, forms a narrow opening that must be navigated.",
+      "box": [
+        0.445,
+        0.236,
+        0.548,
+        0.863
+      ],
+      "point": [
+        0.484,
+        0.527
+      ],
+      "confidence": 1.0,
+      "box_pixels": [
+        769,
+        263,
+        946,
+        962
+      ],
+      "point_pixels": [
+        836,
+        588
+      ],
+      "sam_candidate_scores": [
+        0.4880165457725525,
+        0.673854410648346,
+        0.7141354084014893
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.7141354084014893,
+      "sam_inference_seconds": 0.6847756250062957,
+      "selected_mask_file": "annotations_ai_50/drone/frame_1044_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 31694,
+      "mask_area_fraction": 0.016434977764502853
+    },
+    {
+      "label": "metal piping",
+      "relevance": "medium",
+      "forward_path_reason": "Pipes crossing through the middle distance of the flight corridor.",
+      "box": [
+        0.527,
+        0.677,
+        0.977,
+        0.845
+      ],
+      "point": [
+        0.735,
+        0.766
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        910,
+        755,
+        1687,
+        942
+      ],
+      "point_pixels": [
+        1269,
+        854
+      ],
+      "sam_candidate_scores": [
+        0.5617420673370361,
+        0.7356016039848328,
+        0.7431139945983887
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.7431139945983887,
+      "sam_inference_seconds": 0.6716382500017062,
+      "selected_mask_file": "annotations_ai_50/drone/frame_1044_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 14082,
+      "mask_area_fraction": 0.007302245121465552
+    },
+    {
+      "label": "brick building wall",
+      "relevance": "medium",
+      "forward_path_reason": "Significant obstacle on the left side of the navigation space.",
+      "box": [
+        0.0,
+        0.262,
+        0.445,
+        0.975
+      ],
+      "point": [
+        0.178,
+        0.634
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        0,
+        292,
+        769,
+        1087
+      ],
+      "point_pixels": [
+        307,
+        707
+      ],
+      "sam_candidate_scores": [
+        0.9487266540527344,
+        0.7457131743431091,
+        0.8501055836677551
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9487266540527344,
+      "sam_inference_seconds": 0.6699397919874173,
+      "selected_mask_file": "annotations_ai_50/drone/frame_1044_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 594662,
+      "mask_area_fraction": 0.30836299449090665
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.33210021737687506
+}

@@ -1,0 +1,21 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 1222,
+  "source_frame": "annotations_ai_50/drone/frame_1222.png",
+  "mask": "annotations_ai_50/drone/frame_1222_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": false,
+  "exclusion_reason": "The image is a game menu screen, not a forward-facing navigation view.",
+  "frame_has_relevant_obstacle": false,
+  "obstacles": [],
+  "valid_mask": false,
+  "usable_for_evaluation": false,
+  "flagged_for_review": true,
+  "review_reasons": [
+    "semantic_frame_excluded"
+  ],
+  "final_mask_area_fraction": 0.0
+}

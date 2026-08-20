@@ -1,0 +1,142 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 25,
+  "source_frame": "annotations_ai_50/drone/frame_0025.png",
+  "mask": "annotations_ai_50/drone/frame_0025_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "metal pipe",
+      "relevance": "high",
+      "forward_path_reason": "The pipe is located in the center of the forward flight path and represents a significant collision risk.",
+      "box": [
+        0.2923076923076923,
+        0.13333333333333333,
+        0.4453846153846154,
+        0.88
+      ],
+      "point": [
+        0.35846153846153844,
+        0.5266666666666666
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        505,
+        149,
+        769,
+        981
+      ],
+      "point_pixels": [
+        619,
+        587
+      ],
+      "sam_candidate_scores": [
+        0.8572078943252563,
+        0.9178565740585327,
+        0.9345517754554749
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9345517754554749,
+      "sam_inference_seconds": 0.6353657919971738,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0025_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 33030,
+      "mask_area_fraction": 0.017127762843488648
+    },
+    {
+      "label": "wall",
+      "relevance": "high",
+      "forward_path_reason": "The brick wall on the left side constricts the navigation corridor.",
+      "box": [
+        0.0,
+        0.0,
+        0.35461538461538467,
+        0.8633333333333333
+      ],
+      "point": [
+        0.1523076923076923,
+        0.44
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        0,
+        0,
+        612,
+        963
+      ],
+      "point_pixels": [
+        263,
+        491
+      ],
+      "sam_candidate_scores": [
+        0.93030846118927,
+        0.7344017028808594,
+        0.8994308114051819
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.93030846118927,
+      "sam_inference_seconds": 0.6372149999951944,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0025_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 555969,
+      "mask_area_fraction": 0.2882986733373158
+    },
+    {
+      "label": "wall",
+      "relevance": "high",
+      "forward_path_reason": "The brick wall on the right side constricts the navigation corridor.",
+      "box": [
+        0.5,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "point": [
+        0.7353846153846154,
+        0.5133333333333333
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        864,
+        0,
+        1727,
+        1115
+      ],
+      "point_pixels": [
+        1270,
+        572
+      ],
+      "sam_candidate_scores": [
+        0.9479213356971741,
+        0.8961685299873352,
+        0.9242976903915405
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9479213356971741,
+      "sam_inference_seconds": 0.6285194999945816,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0025_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 728405,
+      "mask_area_fraction": 0.3777156552834196
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": false,
+  "flagged_for_review": true,
+  "review_reasons": [
+    "merged_mask_over_50_percent"
+  ],
+  "final_mask_area_fraction": 0.6831312018784017
+}

@@ -1,0 +1,142 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 840,
+  "source_frame": "annotations_ai_50/drone/frame_0840.png",
+  "mask": "annotations_ai_50/drone/frame_0840_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "building",
+      "relevance": "high",
+      "forward_path_reason": "The large brick building structure on the left directly obstructs the left side of the forward flight corridor.",
+      "box": [
+        0,
+        0,
+        0.67725,
+        0.72917
+      ],
+      "point": [
+        0.30469,
+        0.39583
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        0,
+        0,
+        1170,
+        813
+      ],
+      "point_pixels": [
+        526,
+        441
+      ],
+      "sam_candidate_scores": [
+        0.9344884157180786,
+        0.795467734336853,
+        0.8840204477310181
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9344884157180786,
+      "sam_inference_seconds": 0.7289415420091245,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0840_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 742709,
+      "mask_area_fraction": 0.3851330188835789
+    },
+    {
+      "label": "building",
+      "relevance": "high",
+      "forward_path_reason": "The large brick building structure on the right directly obstructs the right side of the forward flight corridor.",
+      "box": [
+        0.61458,
+        0.25,
+        0.99479,
+        1.0
+      ],
+      "point": [
+        0.83333,
+        0.54167
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        1061,
+        279,
+        1718,
+        1115
+      ],
+      "point_pixels": [
+        1439,
+        604
+      ],
+      "sam_candidate_scores": [
+        0.7704294919967651,
+        0.7729041576385498,
+        0.8550801277160645
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.8550801277160645,
+      "sam_inference_seconds": 0.6789714579936117,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0840_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 411784,
+      "mask_area_fraction": 0.2135312956325501
+    },
+    {
+      "label": "roof",
+      "relevance": "medium",
+      "forward_path_reason": "The wooden roof surface in the foreground significantly restricts the altitude available for forward flight.",
+      "box": [
+        0,
+        0.67708,
+        0.6875,
+        1.0
+      ],
+      "point": [
+        0.27083,
+        0.88542
+      ],
+      "confidence": 0.9,
+      "box_pixels": [
+        0,
+        755,
+        1187,
+        1115
+      ],
+      "point_pixels": [
+        468,
+        987
+      ],
+      "sam_candidate_scores": [
+        0.8828666806221008,
+        0.9324991106987,
+        0.955993115901947
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.955993115901947,
+      "sam_inference_seconds": 0.6890533330151811,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0840_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 233982,
+      "mask_area_fraction": 0.12133176523297491
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": false,
+  "flagged_for_review": true,
+  "review_reasons": [
+    "merged_mask_over_50_percent"
+  ],
+  "final_mask_area_fraction": 0.719996079749104
+}

@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 1069,
+  "source_frame": "annotations_ai_50/drone/frame_1069.png",
+  "mask": "annotations_ai_50/drone/frame_1069_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "wooden platform",
+      "relevance": "high",
+      "forward_path_reason": "It is directly ahead and blocks the central flight corridor between the buildings.",
+      "box": [
+        0.46,
+        0.27,
+        0.54,
+        0.75
+      ],
+      "point": [
+        0.5,
+        0.5
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        794,
+        301,
+        933,
+        836
+      ],
+      "point_pixels": [
+        864,
+        558
+      ],
+      "sam_candidate_scores": [
+        0.8047918677330017,
+        0.6794236898422241,
+        0.7821182608604431
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.8047918677330017,
+      "sam_inference_seconds": 0.7501857499883045,
+      "selected_mask_file": "annotations_ai_50/drone/frame_1069_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 49270,
+      "mask_area_fraction": 0.02554904254613036
+    },
+    {
+      "label": "pipe",
+      "relevance": "medium",
+      "forward_path_reason": "This pipe crosses the gap between the buildings, narrowing the available passage.",
+      "box": [
+        0.46,
+        0.65,
+        0.67,
+        0.75
+      ],
+      "point": [
+        0.5,
+        0.7
+      ],
+      "confidence": 0.9,
+      "box_pixels": [
+        794,
+        725,
+        1157,
+        836
+      ],
+      "point_pixels": [
+        864,
+        780
+      ],
+      "sam_candidate_scores": [
+        0.5129268765449524,
+        0.46078169345855713,
+        0.4936406910419464
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.5129268765449524,
+      "sam_inference_seconds": 0.6848064579826314,
+      "selected_mask_file": "annotations_ai_50/drone/frame_1069_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 29388,
+      "mask_area_fraction": 0.015239197530864198
+    },
+    {
+      "label": "brick building",
+      "relevance": "high",
+      "forward_path_reason": "This structure forms the left wall of the navigation corridor.",
+      "box": [
+        0.0,
+        0.3,
+        0.46,
+        1.0
+      ],
+      "point": [
+        0.2,
+        0.6
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        0,
+        334,
+        794,
+        1115
+      ],
+      "point_pixels": [
+        345,
+        669
+      ],
+      "sam_candidate_scores": [
+        0.9743752479553223,
+        0.6723197102546692,
+        0.932607114315033
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9743752479553223,
+      "sam_inference_seconds": 0.6580621250031982,
+      "selected_mask_file": "annotations_ai_50/drone/frame_1069_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 596411,
+      "mask_area_fraction": 0.3092699414243993
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.3429955072680207
+}

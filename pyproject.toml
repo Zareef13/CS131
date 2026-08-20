@@ -16,6 +16,8 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<9"]
+ai = ["google-genai"]
+annotation = ["google-genai", "torch", "transformers", "pillow"]
 
 [project.scripts]
 risksight = "risksight.cli:main"

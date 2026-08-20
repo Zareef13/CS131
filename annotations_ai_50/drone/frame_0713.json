@@ -1,0 +1,180 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 713,
+  "source_frame": "annotations_ai_50/drone/frame_0713.png",
+  "mask": "annotations_ai_50/drone/frame_0713_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "large tire stack",
+      "relevance": "high",
+      "forward_path_reason": "occupies center foreground and blocks the immediate path",
+      "box": [
+        0.46974,
+        0.6915,
+        0.73618,
+        0.9988
+      ],
+      "point": [
+        0.60296,
+        0.84516
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        811,
+        771,
+        1271,
+        1114
+      ],
+      "point_pixels": [
+        1041,
+        942
+      ],
+      "sam_candidate_scores": [
+        0.9252448081970215,
+        0.8643396496772766,
+        0.8997653722763062
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9252448081970215,
+      "sam_inference_seconds": 0.7067813329922501,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0713_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 135713,
+      "mask_area_fraction": 0.0703742076529935
+    },
+    {
+      "label": "pipe structure",
+      "relevance": "high",
+      "forward_path_reason": "extends across the middle ground directly in the flight path",
+      "box": [
+        0.60296,
+        0.41972,
+        0.72185,
+        0.66667
+      ],
+      "point": [
+        0.66241,
+        0.54312
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        1041,
+        468,
+        1247,
+        743
+      ],
+      "point_pixels": [
+        1144,
+        606
+      ],
+      "sam_candidate_scores": [
+        0.454127699136734,
+        0.7752023339271545,
+        0.7937203645706177
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.7937203645706177,
+      "sam_inference_seconds": 0.6799111670115963,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0713_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 23333,
+      "mask_area_fraction": 0.012099366952077525
+    },
+    {
+      "label": "tire",
+      "relevance": "medium",
+      "forward_path_reason": "situated to the left and restricts the corridor width",
+      "box": [
+        0.29205,
+        0.66993,
+        0.4085,
+        0.84314
+      ],
+      "point": [
+        0.35028,
+        0.75654
+      ],
+      "confidence": 0.92,
+      "box_pixels": [
+        504,
+        747,
+        705,
+        940
+      ],
+      "point_pixels": [
+        605,
+        844
+      ],
+      "sam_candidate_scores": [
+        0.9464733004570007,
+        0.9265059232711792,
+        0.9585757851600647
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9585757851600647,
+      "sam_inference_seconds": 0.7297579169971868,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0713_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 22893,
+      "mask_area_fraction": 0.01187120420151334
+    },
+    {
+      "label": "metal barrier",
+      "relevance": "medium",
+      "forward_path_reason": "low obstacle in the lower center path",
+      "box": [
+        0.33557,
+        0.72549,
+        0.48473,
+        0.9988
+      ],
+      "point": [
+        0.41015,
+        0.86275
+      ],
+      "confidence": 0.88,
+      "box_pixels": [
+        580,
+        809,
+        837,
+        1114
+      ],
+      "point_pixels": [
+        708,
+        962
+      ],
+      "sam_candidate_scores": [
+        0.9498512148857117,
+        0.9569194912910461,
+        0.9675007462501526
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9675007462501526,
+      "sam_inference_seconds": 0.70198299997719,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0713_object_3.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 50127,
+      "mask_area_fraction": 0.025993441358024692
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.12033822016460906
+}

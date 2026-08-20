@@ -1,0 +1,180 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 611,
+  "source_frame": "annotations_ai_50/drone/frame_0611.png",
+  "mask": "annotations_ai_50/drone/frame_0611_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "metal wall",
+      "relevance": "high",
+      "forward_path_reason": "Occupies the immediate left foreground, creating a narrow passage.",
+      "box": [
+        0.0,
+        0.738,
+        0.245,
+        1.0
+      ],
+      "point": [
+        0.1225,
+        0.869
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        0,
+        823,
+        423,
+        1115
+      ],
+      "point_pixels": [
+        212,
+        969
+      ],
+      "sam_candidate_scores": [
+        0.6228008270263672,
+        0.4698256850242615,
+        0.6897265911102295
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.6897265911102295,
+      "sam_inference_seconds": 0.6621686659927946,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0611_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 33962,
+      "mask_area_fraction": 0.01761105303332006
+    },
+    {
+      "label": "container",
+      "relevance": "medium",
+      "forward_path_reason": "Positioned in the direct center-left path, restricting maneuverability.",
+      "box": [
+        0.237,
+        0.4887,
+        0.389,
+        0.7457
+      ],
+      "point": [
+        0.32,
+        0.6
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        409,
+        545,
+        672,
+        831
+      ],
+      "point_pixels": [
+        553,
+        669
+      ],
+      "sam_candidate_scores": [
+        0.9313024282455444,
+        0.884615421295166,
+        0.9344708919525146
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9344708919525146,
+      "sam_inference_seconds": 0.6896386249864008,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0611_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 47719,
+      "mask_area_fraction": 0.02474476885039161
+    },
+    {
+      "label": "van",
+      "relevance": "high",
+      "forward_path_reason": "Extends significantly into the right side of the forward path.",
+      "box": [
+        0.771,
+        0.449,
+        1.0,
+        0.941
+      ],
+      "point": [
+        0.9,
+        0.7
+      ],
+      "confidence": 0.99,
+      "box_pixels": [
+        1332,
+        501,
+        1727,
+        1049
+      ],
+      "point_pixels": [
+        1554,
+        780
+      ],
+      "sam_candidate_scores": [
+        0.975906491279602,
+        0.9338082671165466,
+        0.9731125831604004
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.975906491279602,
+      "sam_inference_seconds": 0.7032870419789106,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0611_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 140929,
+      "mask_area_fraction": 0.07307897335059073
+    },
+    {
+      "label": "barrel",
+      "relevance": "medium",
+      "forward_path_reason": "Located in the center path area, obstructing forward movement.",
+      "box": [
+        0.501,
+        0.485,
+        0.548,
+        0.617
+      ],
+      "point": [
+        0.52,
+        0.55
+      ],
+      "confidence": 0.92,
+      "box_pixels": [
+        865,
+        541,
+        946,
+        688
+      ],
+      "point_pixels": [
+        898,
+        613
+      ],
+      "sam_candidate_scores": [
+        0.9188383221626282,
+        0.9358155727386475,
+        0.9523419737815857
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9523419737815857,
+      "sam_inference_seconds": 0.6562889160122722,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0611_object_3.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 8367,
+      "mask_area_fraction": 0.004338722122660295
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.11977351735696269
+}

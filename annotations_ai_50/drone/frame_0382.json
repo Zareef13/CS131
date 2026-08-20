@@ -1,0 +1,142 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 382,
+  "source_frame": "annotations_ai_50/drone/frame_0382.png",
+  "mask": "annotations_ai_50/drone/frame_0382_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "brick building",
+      "relevance": "high",
+      "forward_path_reason": "The large brick building on the left is directly adjacent to the forward path.",
+      "box": [
+        0.0,
+        0.0543,
+        0.3957,
+        1.0
+      ],
+      "point": [
+        0.1875,
+        0.6695
+      ],
+      "confidence": 1.0,
+      "box_pixels": [
+        0,
+        61,
+        683,
+        1115
+      ],
+      "point_pixels": [
+        324,
+        746
+      ],
+      "sam_candidate_scores": [
+        0.8033808469772339,
+        0.7817273139953613,
+        0.889064371585846
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.889064371585846,
+      "sam_inference_seconds": 0.6620570420054719,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0382_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 520270,
+      "mask_area_fraction": 0.26978689599097305
+    },
+    {
+      "label": "brick building",
+      "relevance": "high",
+      "forward_path_reason": "The brick building structure on the right constricts the forward flight path.",
+      "box": [
+        0.52758,
+        0.0911,
+        0.9999,
+        0.9859
+      ],
+      "point": [
+        0.7516,
+        0.5841
+      ],
+      "confidence": 1.0,
+      "box_pixels": [
+        911,
+        102,
+        1727,
+        1099
+      ],
+      "point_pixels": [
+        1298,
+        651
+      ],
+      "sam_candidate_scores": [
+        0.9422529935836792,
+        0.6387935876846313,
+        0.8930648565292358
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9422529935836792,
+      "sam_inference_seconds": 0.6599817500100471,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0382_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 434172,
+      "mask_area_fraction": 0.22514063122262046
+    },
+    {
+      "label": "brick building",
+      "relevance": "medium",
+      "forward_path_reason": "The brick building located directly ahead in the center blocks the path.",
+      "box": [
+        0.43219,
+        0.10374,
+        0.58047,
+        0.44579
+      ],
+      "point": [
+        0.5055,
+        0.2827
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        746,
+        116,
+        1002,
+        497
+      ],
+      "point_pixels": [
+        873,
+        315
+      ],
+      "sam_candidate_scores": [
+        0.8399726748466492,
+        0.8507193922996521,
+        0.8889331817626953
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.8889331817626953,
+      "sam_inference_seconds": 0.6743706660054158,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0382_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 40488,
+      "mask_area_fraction": 0.02099512146555157
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": false,
+  "flagged_for_review": true,
+  "review_reasons": [
+    "merged_mask_over_50_percent"
+  ],
+  "final_mask_area_fraction": 0.5159226486791451
+}

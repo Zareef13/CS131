@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 229,
+  "source_frame": "annotations_ai_50/drone/frame_0229.png",
+  "mask": "annotations_ai_50/drone/frame_0229_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "structural beam",
+      "relevance": "high",
+      "forward_path_reason": "Large metal beam hanging directly in the upper right forward field of view.",
+      "box": [
+        0.736,
+        0.0,
+        0.998,
+        0.415
+      ],
+      "point": [
+        0.863,
+        0.175
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        1271,
+        0,
+        1724,
+        463
+      ],
+      "point_pixels": [
+        1490,
+        195
+      ],
+      "sam_candidate_scores": [
+        0.9365519881248474,
+        0.6583237051963806,
+        0.871330738067627
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9365519881248474,
+      "sam_inference_seconds": 0.6558891659951769,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0229_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 154206,
+      "mask_area_fraction": 0.07996378434886499
+    },
+    {
+      "label": "crane structure",
+      "relevance": "high",
+      "forward_path_reason": "Dominant industrial structure directly obscuring the central forward path.",
+      "box": [
+        0.258,
+        0.395,
+        0.429,
+        0.664
+      ],
+      "point": [
+        0.342,
+        0.528
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        446,
+        440,
+        741,
+        740
+      ],
+      "point_pixels": [
+        591,
+        589
+      ],
+      "sam_candidate_scores": [
+        0.7806696891784668,
+        0.6971142292022705,
+        0.8159403800964355
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.8159403800964355,
+      "sam_inference_seconds": 0.652448540990008,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0229_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 30507,
+      "mask_area_fraction": 0.015819456889685383
+    },
+    {
+      "label": "construction vehicle",
+      "relevance": "medium",
+      "forward_path_reason": "Yellow loader sits in the forward path area, potential obstacle if flying low.",
+      "box": [
+        0.484,
+        0.521,
+        0.564,
+        0.653
+      ],
+      "point": [
+        0.525,
+        0.59
+      ],
+      "confidence": 0.9,
+      "box_pixels": [
+        836,
+        581,
+        974,
+        728
+      ],
+      "point_pixels": [
+        907,
+        658
+      ],
+      "sam_candidate_scores": [
+        0.6771389245986938,
+        0.7295911908149719,
+        0.7596843838691711
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.7596843838691711,
+      "sam_inference_seconds": 0.635533916996792,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0229_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 10474,
+      "mask_area_fraction": 0.00543131056683924
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.10121455180538962
+}

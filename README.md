@@ -92,6 +92,50 @@ The industrial FPV sequence is the primary navigation use case. The vehicle inte
   </tr>
 </table>
 
+## Quantitative Obstacle-Detection Evaluation
+
+### Evaluation question
+
+RiskSight produces a broad, continuous obstacle-awareness heatmap, not a semantic segmentation. The evaluation therefore asks a detector-oriented question: **does the high-risk response land on independently selected forward-navigation obstacles, and how much of each selected obstacle does it cover?**
+
+Fifty frames were sampled uniformly from the industrial FPV drone video. An annotation pipeline that never receives RiskSight output used `gemini-3.1-flash-lite` to select relevant obstacles and local `facebook/sam2.1-hiera-tiny` to generate object masks. Generation cost approximately `$0.051`. Automated gates excluded six menu/non-navigation frames and eleven frames whose merged masks covered more than half the image, leaving 33 eligible frames.
+
+### Experimental protocol
+
+- Eligible frames were split by alternating temporal samples: 17 validation and 16 held-out test frames.
+- The validation split selected a RiskSight threshold of `0.25`; the test split was evaluated once with that threshold frozen.
+- Frame *t* masks were compared with RiskSight's map from frames *t* and *t + 1*, matching the pipeline's coordinate frame.
+- A 10-pixel spatial tolerance was fixed because RiskSight deliberately smooths risk around structures instead of tracing exact contours.
+- Coverage is the fraction of an AI-selected object's mask reached by the thresholded RiskSight response after applying that tolerance.
+
+### Held-out results
+
+The 16 held-out frames contained 54 **AI-selected obstacle instances**:
+
+| Detection and coverage measure | Result |
+|---|---:|
+| Frames containing a detected obstacle response | **100% (16/16)** |
+| Selected instances with ≥1% coverage | **96.3% (52/54)** |
+| Selected instances with ≥5% coverage | **88.9% (48/54)** |
+| Selected instances with ≥10% coverage | **87.0% (47/54)** |
+| Selected instances with ≥25% coverage | **85.2% (46/54)** |
+| Selected instances with ≥50% coverage | **74.1% (40/54)** |
+| Selected instances with ≥75% coverage | **50.0% (27/54)** |
+
+In plain language, RiskSight placed a meaningful high-risk response on 47 of 54 AI-selected instances and covered at least half of 40 instances. It produced a response on at least one selected obstacle in every held-out frame. The coverage curve also shows the distinction between noticing and fully localizing an obstacle: 96.3% received some response, while 50.0% received at least 75% coverage.
+
+Exact contour agreement was substantially weaker—31.2% tolerant boundary precision, 49.0% boundary recall, and 38.1% boundary F1. This matches the qualitative behavior: RiskSight often identifies the correct structural region but creates a broad, noisy warning field rather than a precise object mask.
+
+### What can—and cannot—be concluded
+
+The strongest supported claim is:
+
+> On 16 held-out frames from the sampled drone sequence, RiskSight covered at least 10% of 47/54 AI-selected obstacle instances using a validation-selected threshold and 10-pixel tolerance.
+
+This is deliberately **not** stated as “87% of all obstacles.” Gemini is capped at four proposals per frame and can omit visible structures; SAM sometimes returns incomplete masks or leaks into neighboring surfaces. Consequently, omitted obstacles are absent from the denominator, and valid RiskSight responses on omitted structures can appear unmatched. The 17 excluded frames also make the reported set easier than the complete sequence.
+
+These results use **AI-generated pseudo-ground truth that has not been human-verified**. They provide reproducible, preliminary evidence of obstacle sensitivity—not safety validation, calibrated collision probability, full-scene detection accuracy, or cross-domain generalization. Machine-readable results are in `outputs/benchmarks/obstacle_detection_drone_ai_50.json`; annotation policy, caching, quality gates, and reproduction commands are documented in `docs/AI_ANNOTATION.md`.
+
 ## Failure Case: Textured Open Environments
 
 <p align="center">
@@ -130,7 +174,9 @@ Each map is independently min-max normalized before fusion. Fixed weights combin
 
 ## Performance Characteristics
 
-RiskSight currently targets offline analysis and demonstration generation, not real-time flight control. Dense Farneback optical flow is the primary per-frame computational bottleneck. The workflow also recomputes features for diagnostic figures and the output video, then retains every resized frame in memory before export. Runtime and memory use therefore grow with frame count and resolution and depend on video decoding, CPU performance, and codec behavior. No FPS benchmark is claimed.
+RiskSight currently targets offline analysis and demonstration generation, not real-time flight control. On the recorded CPU benchmark at 640-pixel width, pipeline-only throughput was 26.1 FPS for the drone video and 31.9 FPS for the vehicle video; end-to-end decode/process/encode throughput was 18.5 and 20.7 FPS respectively. Resolution scaling on the drone video measured approximately 99.8 FPS at width 320, 44.8 FPS at 480, 24.8 FPS at 640, and 11.4 FPS at 960. These are hardware- and codec-specific measurements, not universal real-time guarantees.
+
+Dense Farneback optical flow was the primary per-frame computational bottleneck. Runtime and memory use grow with frame count and resolution and depend on video decoding, CPU performance, and codec behavior.
 
 Potential optimizations include streaming adjacent frame pairs, caching intermediate maps, optional frame skipping or reduced resolution, bounded decoding/processing/encoding queues, and profiling OpenCV CUDA flow implementations where supported. Any optimization would need visual regression checks to ensure the risk-map behavior remains intact.
 
@@ -143,7 +189,7 @@ Potential optimizations include streaming adjacent frame pairs, caching intermed
 - **Fixed heuristic parameters:** detector settings, fusion weights, and thresholding remain constant across environments and can be sensitive to scene appearance.
 - **Frame-relative scoring:** min-max normalization and percentile suppression prevent scores from serving as an absolute scale across scenes.
 - **Offline, CPU-heavy processing:** the current workflow loads the resized video before generating artifacts, and dense optical flow is computationally expensive.
-- **Qualitative evaluation:** the examples are not a labeled benchmark, safety validation, or quantitative comparison with other techniques.
+- **Pseudo-label uncertainty:** quantitative results use AI-generated annotations from one drone video and are not human-verified or suitable for safety claims.
 
 ## Future Work
 
@@ -195,6 +241,9 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 ```text
 .
 ├── assets/                    # tracked README figures and GIFs
+├── annotations/               # Gemini + SAM annotation pipeline
+├── annotations_ai_50/         # current 50-frame pseudo-annotation study
+├── benchmarks/                # runtime and obstacle-detection evaluation
 ├── data/                      # local input videos; ignored by Git
 ├── outputs/                   # generated figures and videos
 ├── src/risksight/
@@ -206,7 +255,7 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 │   ├── pipeline.py            # weighted fusion and overlay
 │   ├── video.py               # video decoding and resize
 │   └── visualization.py       # diagnostic figures and video export
-├── tests/test_pipeline.py     # stable behavior checks
+├── tests/                     # pipeline, annotation, and benchmark checks
 ├── main.py                    # source-checkout launcher
 └── pyproject.toml             # packaging and dependencies
 ```
@@ -215,7 +264,7 @@ Large input videos and generated MP4 files remain local and are not intended for
 
 ## Technologies
 
-Python · OpenCV · NumPy · Matplotlib · setuptools · unittest
+Python · OpenCV · NumPy · Matplotlib · PyTorch · Transformers · Gemini API · setuptools · unittest
 
 ## Project Background
 

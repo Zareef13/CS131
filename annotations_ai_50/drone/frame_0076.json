@@ -1,0 +1,180 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 76,
+  "source_frame": "annotations_ai_50/drone/frame_0076.png",
+  "mask": "annotations_ai_50/drone/frame_0076_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "metal overhead structure",
+      "relevance": "high",
+      "forward_path_reason": "Low-hanging metal roof structure directly obscures the upper center of the flight path.",
+      "box": [
+        0.002,
+        0.005,
+        0.761,
+        0.3424
+      ],
+      "point": [
+        0.398,
+        0.187
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        3,
+        6,
+        1314,
+        382
+      ],
+      "point_pixels": [
+        687,
+        209
+      ],
+      "sam_candidate_scores": [
+        0.6017367839813232,
+        0.5183950662612915,
+        0.5476341843605042
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.6017367839813232,
+      "sam_inference_seconds": 0.7501475839817431,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0076_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 399277,
+      "mask_area_fraction": 0.20704576944776318
+    },
+    {
+      "label": "metal support pillar",
+      "relevance": "high",
+      "forward_path_reason": "Vertical structural column positioned directly in the mid-right flight corridor.",
+      "box": [
+        0.5875,
+        0.2593,
+        0.6452,
+        0.7261
+      ],
+      "point": [
+        0.612,
+        0.534
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        1015,
+        289,
+        1114,
+        810
+      ],
+      "point_pixels": [
+        1057,
+        595
+      ],
+      "sam_candidate_scores": [
+        0.5101186633110046,
+        0.5485981702804565,
+        0.6020049452781677
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.6020049452781677,
+      "sam_inference_seconds": 0.7923115000012331,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0076_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 17082,
+      "mask_area_fraction": 0.008857900238948627
+    },
+    {
+      "label": "brick building wall",
+      "relevance": "medium",
+      "forward_path_reason": "Large building structure on the right constricts the available navigation corridor.",
+      "box": [
+        0.7545,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "point": [
+        0.897,
+        0.505
+      ],
+      "confidence": 0.97,
+      "box_pixels": [
+        1303,
+        0,
+        1727,
+        1115
+      ],
+      "point_pixels": [
+        1549,
+        563
+      ],
+      "sam_candidate_scores": [
+        0.7483171224594116,
+        0.8171887397766113,
+        0.8770214319229126
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.8770214319229126,
+      "sam_inference_seconds": 0.7160647920100018,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0076_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 427282,
+      "mask_area_fraction": 0.22156780996946768
+    },
+    {
+      "label": "metal pipe",
+      "relevance": "medium",
+      "forward_path_reason": "Diagonal metal pipe crossing the left side of the flight path.",
+      "box": [
+        0.1802,
+        0.2784,
+        0.6757,
+        0.6391
+      ],
+      "point": [
+        0.384,
+        0.448
+      ],
+      "confidence": 0.92,
+      "box_pixels": [
+        311,
+        310,
+        1167,
+        713
+      ],
+      "point_pixels": [
+        663,
+        500
+      ],
+      "sam_candidate_scores": [
+        0.33143022656440735,
+        0.23243404924869537,
+        0.4279915690422058
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.4279915690422058,
+      "sam_inference_seconds": 0.7448372909857426,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0076_object_3.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 63124,
+      "mask_area_fraction": 0.0327330578786672
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.4697051722421346
+}

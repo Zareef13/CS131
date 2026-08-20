@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 560,
+  "source_frame": "annotations_ai_50/drone/frame_0560.png",
+  "mask": "annotations_ai_50/drone/frame_0560_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "pillar",
+      "relevance": "high",
+      "forward_path_reason": "Large pillar located directly in the center path.",
+      "box": [
+        0.5,
+        0.05,
+        0.58,
+        0.55
+      ],
+      "point": [
+        0.54,
+        0.3
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        864,
+        56,
+        1002,
+        613
+      ],
+      "point_pixels": [
+        933,
+        334
+      ],
+      "sam_candidate_scores": [
+        0.5936239361763,
+        0.7415447235107422,
+        0.7886736989021301
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.7886736989021301,
+      "sam_inference_seconds": 0.7135776669892948,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0560_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 29416,
+      "mask_area_fraction": 0.015253716978627372
+    },
+    {
+      "label": "concrete barrier",
+      "relevance": "high",
+      "forward_path_reason": "Extends across the path, obstructing forward progress.",
+      "box": [
+        0.53,
+        0.43,
+        0.98,
+        0.95
+      ],
+      "point": [
+        0.75,
+        0.65
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        915,
+        479,
+        1692,
+        1059
+      ],
+      "point_pixels": [
+        1295,
+        725
+      ],
+      "sam_candidate_scores": [
+        0.7005524635314941,
+        0.7244431376457214,
+        0.724465012550354
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.724465012550354,
+      "sam_inference_seconds": 0.708402832999127,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0560_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 110089,
+      "mask_area_fraction": 0.05708683874286473
+    },
+    {
+      "label": "metal support",
+      "relevance": "medium",
+      "forward_path_reason": "Vertical structure encroaching from the top center.",
+      "box": [
+        0.53,
+        0.0,
+        0.73,
+        0.45
+      ],
+      "point": [
+        0.63,
+        0.25
+      ],
+      "confidence": 0.9,
+      "box_pixels": [
+        915,
+        0,
+        1261,
+        502
+      ],
+      "point_pixels": [
+        1088,
+        279
+      ],
+      "sam_candidate_scores": [
+        0.4871407747268677,
+        0.3135494887828827,
+        0.48347246646881104
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.4871407747268677,
+      "sam_inference_seconds": 0.6758787919825409,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0560_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 63088,
+      "mask_area_fraction": 0.0327143900172574
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.10502538829151732
+}

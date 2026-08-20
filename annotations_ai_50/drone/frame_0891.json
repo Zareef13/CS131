@@ -1,0 +1,142 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 891,
+  "source_frame": "annotations_ai_50/drone/frame_0891.png",
+  "mask": "annotations_ai_50/drone/frame_0891_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "building wall",
+      "relevance": "high",
+      "forward_path_reason": "Left building wall dominates the left side of the flight path and narrows the alley corridor.",
+      "box": [
+        0.0,
+        0.0,
+        0.3344,
+        1.0
+      ],
+      "point": [
+        0.165,
+        0.5
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        0,
+        0,
+        578,
+        1115
+      ],
+      "point_pixels": [
+        285,
+        558
+      ],
+      "sam_candidate_scores": [
+        0.972525954246521,
+        0.8598043322563171,
+        0.9025365710258484
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.972525954246521,
+      "sam_inference_seconds": 0.8472887499956414,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0891_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 656832,
+      "mask_area_fraction": 0.34060135404221425
+    },
+    {
+      "label": "building wall",
+      "relevance": "high",
+      "forward_path_reason": "Right building wall narrows the right side of the flight corridor.",
+      "box": [
+        0.58016,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "point": [
+        0.79,
+        0.5
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        1002,
+        0,
+        1727,
+        1115
+      ],
+      "point_pixels": [
+        1364,
+        558
+      ],
+      "sam_candidate_scores": [
+        0.9840615391731262,
+        0.9328215718269348,
+        0.9792923927307129
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9840615391731262,
+      "sam_inference_seconds": 0.6950405839888845,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0891_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 730690,
+      "mask_area_fraction": 0.3789005459312359
+    },
+    {
+      "label": "metal structure",
+      "relevance": "high",
+      "forward_path_reason": "Central scaffolding structure directly obstructs the central forward flight path.",
+      "box": [
+        0.48118,
+        0.23556,
+        0.58058,
+        0.77787
+      ],
+      "point": [
+        0.53,
+        0.5
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        831,
+        263,
+        1003,
+        867
+      ],
+      "point_pixels": [
+        915,
+        558
+      ],
+      "sam_candidate_scores": [
+        0.8354412317276001,
+        0.6391735076904297,
+        0.7713311910629272
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.8354412317276001,
+      "sam_inference_seconds": 0.6933860830031335,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0891_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 65549,
+      "mask_area_fraction": 0.03399054576529935
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": false,
+  "flagged_for_review": true,
+  "review_reasons": [
+    "merged_mask_over_50_percent"
+  ],
+  "final_mask_area_fraction": 0.7534924457387495
+}

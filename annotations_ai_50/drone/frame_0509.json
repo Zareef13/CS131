@@ -1,0 +1,180 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 509,
+  "source_frame": "annotations_ai_50/drone/frame_0509.png",
+  "mask": "annotations_ai_50/drone/frame_0509_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "beam",
+      "relevance": "high",
+      "forward_path_reason": "Low-hanging horizontal structural beam directly blocking the immediate forward flight path.",
+      "box": [
+        0.001,
+        0.6456,
+        0.8784,
+        0.7643
+      ],
+      "point": [
+        0.444,
+        0.707
+      ],
+      "confidence": 0.99,
+      "box_pixels": [
+        2,
+        720,
+        1517,
+        852
+      ],
+      "point_pixels": [
+        767,
+        788
+      ],
+      "sam_candidate_scores": [
+        0.9579180479049683,
+        0.9422854781150818,
+        0.9714115858078003
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9714115858078003,
+      "sam_inference_seconds": 0.7210189579927828,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0509_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 120204,
+      "mask_area_fraction": 0.06233198924731183
+    },
+    {
+      "label": "bridge support",
+      "relevance": "high",
+      "forward_path_reason": "Large vertical concrete pillar structure obstructing the flight corridor.",
+      "box": [
+        0.6014,
+        0.4316,
+        0.7265,
+        0.6879
+      ],
+      "point": [
+        0.669,
+        0.584
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        1039,
+        481,
+        1255,
+        767
+      ],
+      "point_pixels": [
+        1155,
+        651
+      ],
+      "sam_candidate_scores": [
+        0.6393769979476929,
+        0.45079344511032104,
+        0.772006630897522
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.772006630897522,
+      "sam_inference_seconds": 0.6901013749884441,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0509_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 12028,
+      "mask_area_fraction": 0.0062371399176954735
+    },
+    {
+      "label": "bridge support",
+      "relevance": "high",
+      "forward_path_reason": "Large vertical concrete pillar obstructing the flight path.",
+      "box": [
+        0.7258,
+        0.4896,
+        0.8283,
+        0.7371
+      ],
+      "point": [
+        0.778,
+        0.638
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        1253,
+        546,
+        1430,
+        822
+      ],
+      "point_pixels": [
+        1344,
+        711
+      ],
+      "sam_candidate_scores": [
+        0.41133224964141846,
+        0.9084724187850952,
+        0.9112852811813354
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9112852811813354,
+      "sam_inference_seconds": 0.6771744999859948,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0509_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 11620,
+      "mask_area_fraction": 0.0060255708217177755
+    },
+    {
+      "label": "bridge support",
+      "relevance": "high",
+      "forward_path_reason": "Large vertical concrete pillar obstructing the flight path.",
+      "box": [
+        0.8243,
+        0.5407,
+        0.9248,
+        0.7915
+      ],
+      "point": [
+        0.875,
+        0.672
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        1424,
+        603,
+        1597,
+        883
+      ],
+      "point_pixels": [
+        1511,
+        749
+      ],
+      "sam_candidate_scores": [
+        0.5032739639282227,
+        0.1341705620288849,
+        0.576564610004425
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.576564610004425,
+      "sam_inference_seconds": 0.6748489589954261,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0509_object_3.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 12024,
+      "mask_area_fraction": 0.006235065710872162
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.08082976569759724
+}

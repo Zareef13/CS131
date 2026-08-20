@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 764,
+  "source_frame": "annotations_ai_50/drone/frame_0764.png",
+  "mask": "annotations_ai_50/drone/frame_0764_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "large industrial dumpster",
+      "relevance": "high",
+      "forward_path_reason": "Occupies the right side of the forward path and significantly narrows navigable space.",
+      "box": [
+        0.521,
+        0.437,
+        0.985,
+        0.991
+      ],
+      "point": [
+        0.753,
+        0.643
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        900,
+        487,
+        1701,
+        1105
+      ],
+      "point_pixels": [
+        1300,
+        717
+      ],
+      "sam_candidate_scores": [
+        0.9363033771514893,
+        0.8532215356826782,
+        0.9231840372085571
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9363033771514893,
+      "sam_inference_seconds": 0.7713454169861507,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0764_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 305193,
+      "mask_area_fraction": 0.15825835075667066
+    },
+    {
+      "label": "barrel",
+      "relevance": "medium",
+      "forward_path_reason": "Located centrally in the path, posing a collision risk if flight continues straight.",
+      "box": [
+        0.495,
+        0.727,
+        0.548,
+        0.845
+      ],
+      "point": [
+        0.515,
+        0.777
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        855,
+        811,
+        946,
+        942
+      ],
+      "point_pixels": [
+        889,
+        866
+      ],
+      "sam_candidate_scores": [
+        0.9247592687606812,
+        0.9504356980323792,
+        0.959277331829071
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.959277331829071,
+      "sam_inference_seconds": 0.7209402910084464,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0764_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 8474,
+      "mask_area_fraction": 0.004394207155183858
+    },
+    {
+      "label": "debris bag",
+      "relevance": "medium",
+      "forward_path_reason": "Obstacle in the lower right quadrant narrowing the forward flight corridor.",
+      "box": [
+        0.545,
+        0.747,
+        0.665,
+        0.977
+      ],
+      "point": [
+        0.601,
+        0.878
+      ],
+      "confidence": 0.92,
+      "box_pixels": [
+        941,
+        833,
+        1148,
+        1089
+      ],
+      "point_pixels": [
+        1038,
+        979
+      ],
+      "sam_candidate_scores": [
+        0.9356107115745544,
+        0.8825613260269165,
+        0.9355561137199402
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9356107115745544,
+      "sam_inference_seconds": 0.6772323749901261,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0764_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 37655,
+      "mask_area_fraction": 0.019526064482941724
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.18215062060268153
+}

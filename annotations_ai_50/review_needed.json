@@ -1,0 +1,155 @@
+[
+  {
+    "domain": "drone",
+    "frame_index": 25,
+    "annotation": "annotations_ai_50/drone/frame_0025.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 50,
+    "annotation": "annotations_ai_50/drone/frame_0050.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 382,
+    "annotation": "annotations_ai_50/drone/frame_0382.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 432,
+    "annotation": "annotations_ai_50/drone/frame_0432.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 458,
+    "annotation": "annotations_ai_50/drone/frame_0458.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 636,
+    "annotation": "annotations_ai_50/drone/frame_0636.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 840,
+    "annotation": "annotations_ai_50/drone/frame_0840.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 865,
+    "annotation": "annotations_ai_50/drone/frame_0865.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 891,
+    "annotation": "annotations_ai_50/drone/frame_0891.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 942,
+    "annotation": "annotations_ai_50/drone/frame_0942.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 967,
+    "annotation": "annotations_ai_50/drone/frame_0967.json",
+    "exclusion_reason": "",
+    "reasons": [
+      "merged_mask_over_50_percent"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 1120,
+    "annotation": "annotations_ai_50/drone/frame_1120.json",
+    "exclusion_reason": "The view is an in-game pause menu/map screen, not a forward-facing FPV navigation view.",
+    "reasons": [
+      "semantic_frame_excluded"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 1146,
+    "annotation": "annotations_ai_50/drone/frame_1146.json",
+    "exclusion_reason": "The view is of a pause/in-game menu screen, not a navigation view.",
+    "reasons": [
+      "semantic_frame_excluded"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 1171,
+    "annotation": "annotations_ai_50/drone/frame_1171.json",
+    "exclusion_reason": "The view is of a pause/in-game menu screen, not a navigation view.",
+    "reasons": [
+      "semantic_frame_excluded"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 1197,
+    "annotation": "annotations_ai_50/drone/frame_1197.json",
+    "exclusion_reason": "The frame shows a game pause menu with an overlay map, not a navigation view.",
+    "reasons": [
+      "semantic_frame_excluded"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 1222,
+    "annotation": "annotations_ai_50/drone/frame_1222.json",
+    "exclusion_reason": "The image is a game menu screen, not a forward-facing navigation view.",
+    "reasons": [
+      "semantic_frame_excluded"
+    ]
+  },
+  {
+    "domain": "drone",
+    "frame_index": 1248,
+    "annotation": "annotations_ai_50/drone/frame_1248.json",
+    "exclusion_reason": "The view is an in-game menu/map screen.",
+    "reasons": [
+      "semantic_frame_excluded"
+    ]
+  }
+]

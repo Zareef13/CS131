@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 178,
+  "source_frame": "annotations_ai_50/drone/frame_0178.png",
+  "mask": "annotations_ai_50/drone/frame_0178_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "metal structure",
+      "relevance": "high",
+      "forward_path_reason": "Large overhead metal frame blocking the central flight path.",
+      "box": [
+        0.3541666666666667,
+        0.0,
+        0.9708333333333333,
+        0.9733333333333333
+      ],
+      "point": [
+        0.6208333333333333,
+        0.24333333333333332
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        612,
+        0,
+        1677,
+        1085
+      ],
+      "point_pixels": [
+        1072,
+        271
+      ],
+      "sam_candidate_scores": [
+        0.7485465407371521,
+        0.5939797759056091,
+        0.731627345085144
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.7485465407371521,
+      "sam_inference_seconds": 0.680001083004754,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0178_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 482681,
+      "mask_area_fraction": 0.25029505592061596
+    },
+    {
+      "label": "metal support beam",
+      "relevance": "high",
+      "forward_path_reason": "Vertical support structure directly in the left foreground.",
+      "box": [
+        0.0,
+        0.0,
+        0.11666666666666667,
+        0.8966666666666667
+      ],
+      "point": [
+        0.0,
+        0.4333333333333333
+      ],
+      "confidence": 0.9,
+      "box_pixels": [
+        0,
+        0,
+        201,
+        1000
+      ],
+      "point_pixels": [
+        0,
+        483
+      ],
+      "sam_candidate_scores": [
+        0.4106314778327942,
+        0.8522267937660217,
+        0.9024672508239746
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9024672508239746,
+      "sam_inference_seconds": 0.7027597499836702,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0178_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 66527,
+      "mask_area_fraction": 0.034497689333598834
+    },
+    {
+      "label": "metal beam",
+      "relevance": "medium",
+      "forward_path_reason": "Horizontal structure protruding into the central flight corridor.",
+      "box": [
+        0.2583333333333333,
+        0.6766666666666667,
+        0.4791666666666667,
+        0.7366666666666667
+      ],
+      "point": [
+        0.35,
+        0.7066666666666667
+      ],
+      "confidence": 0.85,
+      "box_pixels": [
+        446,
+        754,
+        828,
+        821
+      ],
+      "point_pixels": [
+        604,
+        788
+      ],
+      "sam_candidate_scores": [
+        0.7395949959754944,
+        0.880251944065094,
+        0.8913758397102356
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.8913758397102356,
+      "sam_inference_seconds": 0.6642080410092603,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0178_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 18916,
+      "mask_area_fraction": 0.009808924067436612
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.2946016693216514
+}

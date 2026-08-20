@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 993,
+  "source_frame": "annotations_ai_50/drone/frame_0993.png",
+  "mask": "annotations_ai_50/drone/frame_0993_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "building",
+      "relevance": "high",
+      "forward_path_reason": "Large building structure directly in the center of the forward flight path.",
+      "box": [
+        0.401,
+        0.74,
+        0.86,
+        1.0
+      ],
+      "point": [
+        0.573,
+        0.862
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        693,
+        825,
+        1485,
+        1115
+      ],
+      "point_pixels": [
+        990,
+        961
+      ],
+      "sam_candidate_scores": [
+        0.9495450854301453,
+        0.8785275220870972,
+        0.9503474831581116
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9503474831581116,
+      "sam_inference_seconds": 0.7130699999979697,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0993_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 193788,
+      "mask_area_fraction": 0.10048909796893668
+    },
+    {
+      "label": "building",
+      "relevance": "medium",
+      "forward_path_reason": "Large industrial building structure looming in the left-center path.",
+      "box": [
+        0.0,
+        0.515,
+        0.316,
+        0.824
+      ],
+      "point": [
+        0.134,
+        0.677
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        0,
+        574,
+        546,
+        919
+      ],
+      "point_pixels": [
+        231,
+        755
+      ],
+      "sam_candidate_scores": [
+        0.902482271194458,
+        0.6687831878662109,
+        0.8273893594741821
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.902482271194458,
+      "sam_inference_seconds": 0.6768826250045095,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0993_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 129180,
+      "mask_area_fraction": 0.06698650935882118
+    },
+    {
+      "label": "chimney",
+      "relevance": "medium",
+      "forward_path_reason": "Tall chimney column located in the central flight corridor.",
+      "box": [
+        0.467,
+        0.342,
+        0.506,
+        0.631
+      ],
+      "point": [
+        0.484,
+        0.472
+      ],
+      "confidence": 0.96,
+      "box_pixels": [
+        807,
+        381,
+        874,
+        704
+      ],
+      "point_pixels": [
+        836,
+        526
+      ],
+      "sam_candidate_scores": [
+        0.9579699039459229,
+        0.9612401127815247,
+        0.9673289656639099
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9673289656639099,
+      "sam_inference_seconds": 0.6756071249837987,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0993_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 13960,
+      "mask_area_fraction": 0.007238981813354573
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.17471458914111243
+}

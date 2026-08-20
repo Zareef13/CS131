@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 1095,
+  "source_frame": "annotations_ai_50/drone/frame_1095.png",
+  "mask": "annotations_ai_50/drone/frame_1095_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "building",
+      "relevance": "high",
+      "forward_path_reason": "Large building structure directly blocking the left portion of the forward flight path.",
+      "box": [
+        0,
+        0.316,
+        0.472,
+        1
+      ],
+      "point": [
+        0.245,
+        0.725
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        0,
+        352,
+        815,
+        1115
+      ],
+      "point_pixels": [
+        423,
+        808
+      ],
+      "sam_candidate_scores": [
+        0.975193202495575,
+        0.7281232476234436,
+        0.9304048418998718
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.975193202495575,
+      "sam_inference_seconds": 0.6637546250130981,
+      "selected_mask_file": "annotations_ai_50/drone/frame_1095_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 587805,
+      "mask_area_fraction": 0.30480728544404617
+    },
+    {
+      "label": "building",
+      "relevance": "high",
+      "forward_path_reason": "Wall structure protruding into the center of the forward view.",
+      "box": [
+        0.4721,
+        0.283,
+        0.5485,
+        0.9289
+      ],
+      "point": [
+        0.518,
+        0.655
+      ],
+      "confidence": 0.92,
+      "box_pixels": [
+        815,
+        316,
+        947,
+        1036
+      ],
+      "point_pixels": [
+        895,
+        730
+      ],
+      "sam_candidate_scores": [
+        0.8268005847930908,
+        0.7476285696029663,
+        0.8616189956665039
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.8616189956665039,
+      "sam_inference_seconds": 0.6522779999941122,
+      "selected_mask_file": "annotations_ai_50/drone/frame_1095_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 41864,
+      "mask_area_fraction": 0.021708648612770477
+    },
+    {
+      "label": "building",
+      "relevance": "high",
+      "forward_path_reason": "Building facade occupying the right side of the forward path.",
+      "box": [
+        0.735,
+        0.52,
+        1,
+        1
+      ],
+      "point": [
+        0.875,
+        0.812
+      ],
+      "confidence": 0.9,
+      "box_pixels": [
+        1269,
+        580,
+        1727,
+        1115
+      ],
+      "point_pixels": [
+        1511,
+        905
+      ],
+      "sam_candidate_scores": [
+        0.9222592115402222,
+        0.7484044432640076,
+        0.9088537096977234
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9222592115402222,
+      "sam_inference_seconds": 0.6998451669933274,
+      "selected_mask_file": "annotations_ai_50/drone/frame_1095_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 196251,
+      "mask_area_fraction": 0.10176629082039028
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.42828222487720696
+}

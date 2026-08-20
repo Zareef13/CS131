@@ -1,0 +1,40 @@
+{
+  "method": "sorted temporal groups of five; first 20% of groups validation",
+  "validation": [
+    "annotations_ai_50/drone/frame_0000_mask.png",
+    "annotations_ai_50/drone/frame_0076_mask.png",
+    "annotations_ai_50/drone/frame_0101_mask.png",
+    "annotations_ai_50/drone/frame_0127_mask.png",
+    "annotations_ai_50/drone/frame_0152_mask.png"
+  ],
+  "test": [
+    "annotations_ai_50/drone/frame_0178_mask.png",
+    "annotations_ai_50/drone/frame_0203_mask.png",
+    "annotations_ai_50/drone/frame_0229_mask.png",
+    "annotations_ai_50/drone/frame_0254_mask.png",
+    "annotations_ai_50/drone/frame_0280_mask.png",
+    "annotations_ai_50/drone/frame_0305_mask.png",
+    "annotations_ai_50/drone/frame_0331_mask.png",
+    "annotations_ai_50/drone/frame_0356_mask.png",
+    "annotations_ai_50/drone/frame_0407_mask.png",
+    "annotations_ai_50/drone/frame_0483_mask.png",
+    "annotations_ai_50/drone/frame_0509_mask.png",
+    "annotations_ai_50/drone/frame_0534_mask.png",
+    "annotations_ai_50/drone/frame_0560_mask.png",
+    "annotations_ai_50/drone/frame_0585_mask.png",
+    "annotations_ai_50/drone/frame_0611_mask.png",
+    "annotations_ai_50/drone/frame_0662_mask.png",
+    "annotations_ai_50/drone/frame_0687_mask.png",
+    "annotations_ai_50/drone/frame_0713_mask.png",
+    "annotations_ai_50/drone/frame_0738_mask.png",
+    "annotations_ai_50/drone/frame_0764_mask.png",
+    "annotations_ai_50/drone/frame_0789_mask.png",
+    "annotations_ai_50/drone/frame_0815_mask.png",
+    "annotations_ai_50/drone/frame_0916_mask.png",
+    "annotations_ai_50/drone/frame_0993_mask.png",
+    "annotations_ai_50/drone/frame_1018_mask.png",
+    "annotations_ai_50/drone/frame_1044_mask.png",
+    "annotations_ai_50/drone/frame_1069_mask.png",
+    "annotations_ai_50/drone/frame_1095_mask.png"
+  ]
+}

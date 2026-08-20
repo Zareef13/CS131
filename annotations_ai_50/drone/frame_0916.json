@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 916,
+  "source_frame": "annotations_ai_50/drone/frame_0916.png",
+  "mask": "annotations_ai_50/drone/frame_0916_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "industrial ladder structure",
+      "relevance": "high",
+      "forward_path_reason": "The large metal ladder structure directly blocks the center of the forward flight path.",
+      "box": [
+        0.4249999999999999,
+        0.176875,
+        0.5765625,
+        0.9984375
+      ],
+      "point": [
+        0.484375,
+        0.4390625
+      ],
+      "confidence": 1,
+      "box_pixels": [
+        734,
+        197,
+        996,
+        1113
+      ],
+      "point_pixels": [
+        837,
+        490
+      ],
+      "sam_candidate_scores": [
+        0.616823136806488,
+        0.6007193922996521,
+        0.6810140013694763
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.6810140013694763,
+      "sam_inference_seconds": 0.6812665829784237,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0916_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 88006,
+      "mask_area_fraction": 0.045635661423071815
+    },
+    {
+      "label": "brick wall",
+      "relevance": "medium",
+      "forward_path_reason": "The large brick building wall is on the right side and constricts the corridor.",
+      "box": [
+        0.56484375,
+        0,
+        1,
+        1
+      ],
+      "point": [
+        0.7921875,
+        0.534375
+      ],
+      "confidence": 1,
+      "box_pixels": [
+        975,
+        0,
+        1727,
+        1115
+      ],
+      "point_pixels": [
+        1368,
+        596
+      ],
+      "sam_candidate_scores": [
+        0.9663752913475037,
+        0.9483760595321655,
+        0.9821065664291382
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9821065664291382,
+      "sam_inference_seconds": 0.6792273340106476,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0916_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 750831,
+      "mask_area_fraction": 0.38934469583831144
+    },
+    {
+      "label": "pipes",
+      "relevance": "low",
+      "forward_path_reason": "These pipes extend across the left side of the screen and represent a hazard if turning left.",
+      "box": [
+        0,
+        0.715625,
+        0.409375,
+        0.9953125
+      ],
+      "point": [
+        0.1796875,
+        0.8640625
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        0,
+        798,
+        707,
+        1110
+      ],
+      "point_pixels": [
+        310,
+        963
+      ],
+      "sam_candidate_scores": [
+        0.5150406956672668,
+        0.5576719641685486,
+        0.6704835891723633
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.6704835891723633,
+      "sam_inference_seconds": 0.661764625023352,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0916_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 36398,
+      "mask_area_fraction": 0.018874244988716316
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.45385460225009955
+}

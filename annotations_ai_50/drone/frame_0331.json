@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 331,
+  "source_frame": "annotations_ai_50/drone/frame_0331.png",
+  "mask": "annotations_ai_50/drone/frame_0331_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "metal truss structure",
+      "relevance": "high",
+      "forward_path_reason": "Occupies the right side of the flight corridor and restricts pathing.",
+      "box": [
+        0.611328125,
+        0.0134765625,
+        0.7822265625,
+        0.7744140625
+      ],
+      "point": [
+        0.703125,
+        0.4296875
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        1056,
+        15,
+        1351,
+        863
+      ],
+      "point_pixels": [
+        1214,
+        479
+      ],
+      "sam_candidate_scores": [
+        0.5787422060966492,
+        0.7565362453460693,
+        0.7638481855392456
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.7638481855392456,
+      "sam_inference_seconds": 0.6850980420131236,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0331_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 83428,
+      "mask_area_fraction": 0.04326173171379265
+    },
+    {
+      "label": "brick building wall",
+      "relevance": "medium",
+      "forward_path_reason": "Dominant structure on the left side, narrowing the path.",
+      "box": [
+        0.056640625,
+        0.1103515625,
+        0.607421875,
+        0.724609375
+      ],
+      "point": [
+        0.337890625,
+        0.4384765625
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        98,
+        123,
+        1049,
+        808
+      ],
+      "point_pixels": [
+        584,
+        489
+      ],
+      "sam_candidate_scores": [
+        0.6893661618232727,
+        0.46070241928100586,
+        0.6819678544998169
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.6893661618232727,
+      "sam_inference_seconds": 0.6740100840106606,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0331_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 382722,
+      "mask_area_fraction": 0.19846114595778575
+    },
+    {
+      "label": "yellow tractor",
+      "relevance": "low",
+      "forward_path_reason": "Located directly below the current trajectory, presents a low-level obstacle.",
+      "box": [
+        0.4072265625,
+        0.7216796875,
+        0.48828125,
+        0.994140625
+      ],
+      "point": [
+        0.44921875,
+        0.8525390625
+      ],
+      "confidence": 0.92,
+      "box_pixels": [
+        703,
+        805,
+        843,
+        1108
+      ],
+      "point_pixels": [
+        776,
+        951
+      ],
+      "sam_candidate_scores": [
+        0.9258940815925598,
+        0.8506354689598083,
+        0.9317092895507812
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9317092895507812,
+      "sam_inference_seconds": 0.6676520410110243,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0331_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 28237,
+      "mask_area_fraction": 0.014642344517456525
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.2563652221890349
+}

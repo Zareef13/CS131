@@ -1,0 +1,142 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 432,
+  "source_frame": "annotations_ai_50/drone/frame_0432.png",
+  "mask": "annotations_ai_50/drone/frame_0432_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "brick building",
+      "relevance": "high",
+      "forward_path_reason": "The large brick building structure on the left directly encroaches on the left side of the flight path.",
+      "box": [
+        0,
+        0,
+        0.589,
+        0.654
+      ],
+      "point": [
+        0.28,
+        0.35
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        0,
+        0,
+        1017,
+        729
+      ],
+      "point_pixels": [
+        484,
+        390
+      ],
+      "sam_candidate_scores": [
+        0.885623037815094,
+        0.891421914100647,
+        0.931014358997345
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.931014358997345,
+      "sam_inference_seconds": 0.6813676670135465,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0432_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 484704,
+      "mask_area_fraction": 0.2513440860215054
+    },
+    {
+      "label": "brick building",
+      "relevance": "high",
+      "forward_path_reason": "The brick building structure on the right severely constricts the right side of the flight path.",
+      "box": [
+        0.6776,
+        0.113,
+        1.0,
+        1.0
+      ],
+      "point": [
+        0.85,
+        0.5
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        1170,
+        126,
+        1727,
+        1115
+      ],
+      "point_pixels": [
+        1468,
+        558
+      ],
+      "sam_candidate_scores": [
+        0.7658578753471375,
+        0.6233355402946472,
+        0.7056887745857239
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.7658578753471375,
+      "sam_inference_seconds": 0.6603170420276001,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0432_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 368377,
+      "mask_area_fraction": 0.1910225217376875
+    },
+    {
+      "label": "concrete barrier",
+      "relevance": "medium",
+      "forward_path_reason": "A low concrete wall obstacle positioned centrally/low in the view obstructs the ground level flight path.",
+      "box": [
+        0.239,
+        0.548,
+        0.766,
+        0.864
+      ],
+      "point": [
+        0.5,
+        0.7
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        413,
+        611,
+        1323,
+        963
+      ],
+      "point_pixels": [
+        864,
+        780
+      ],
+      "sam_candidate_scores": [
+        0.7160371541976929,
+        0.6116641163825989,
+        0.706310510635376
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.7160371541976929,
+      "sam_inference_seconds": 0.6702960410038941,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0432_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 171035,
+      "mask_area_fraction": 0.08869049100623921
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": false,
+  "flagged_for_review": true,
+  "review_reasons": [
+    "merged_mask_over_50_percent"
+  ],
+  "final_mask_area_fraction": 0.531054506006903
+}

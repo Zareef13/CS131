@@ -1,0 +1,142 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 967,
+  "source_frame": "annotations_ai_50/drone/frame_0967.png",
+  "mask": "annotations_ai_50/drone/frame_0967_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "metal wall",
+      "relevance": "high",
+      "forward_path_reason": "Top section of the metal structure directly blocks the upper flight path.",
+      "box": [
+        0.0,
+        0.0,
+        1.0,
+        0.183
+      ],
+      "point": [
+        0.35,
+        0.12
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        0,
+        0,
+        1727,
+        204
+      ],
+      "point_pixels": [
+        604,
+        134
+      ],
+      "sam_candidate_scores": [
+        0.6206581592559814,
+        0.8525769114494324,
+        0.9070448279380798
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9070448279380798,
+      "sam_inference_seconds": 0.6563623340043705,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0967_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 181555,
+      "mask_area_fraction": 0.09414565495154653
+    },
+    {
+      "label": "metal wall",
+      "relevance": "high",
+      "forward_path_reason": "Left side metal wall structure narrows the navigation corridor.",
+      "box": [
+        0.0,
+        0.0,
+        0.123,
+        1.0
+      ],
+      "point": [
+        0.05,
+        0.5
+      ],
+      "confidence": 0.97,
+      "box_pixels": [
+        0,
+        0,
+        212,
+        1115
+      ],
+      "point_pixels": [
+        86,
+        558
+      ],
+      "sam_candidate_scores": [
+        0.8756188154220581,
+        0.9293396472930908,
+        0.9677940011024475
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.9677940011024475,
+      "sam_inference_seconds": 0.6665946250141133,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0967_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 208342,
+      "mask_area_fraction": 0.1080360994955529
+    },
+    {
+      "label": "metal wall",
+      "relevance": "high",
+      "forward_path_reason": "Right side metal wall structure restricts the navigation corridor.",
+      "box": [
+        0.56,
+        0.15,
+        1.0,
+        1.0
+      ],
+      "point": [
+        0.85,
+        0.6
+      ],
+      "confidence": 0.97,
+      "box_pixels": [
+        967,
+        167,
+        1727,
+        1115
+      ],
+      "point_pixels": [
+        1468,
+        669
+      ],
+      "sam_candidate_scores": [
+        0.8601340055465698,
+        0.5056977868080139,
+        0.7604541778564453
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.8601340055465698,
+      "sam_inference_seconds": 0.6894308330083732,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0967_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 645491,
+      "mask_area_fraction": 0.3347204591464224
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": false,
+  "flagged_for_review": true,
+  "review_reasons": [
+    "merged_mask_over_50_percent"
+  ],
+  "final_mask_area_fraction": 0.5269247602216912
+}

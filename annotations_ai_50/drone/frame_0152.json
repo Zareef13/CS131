@@ -1,0 +1,140 @@
+{
+  "reference_type": "AI-generated Gemini + SAM pseudo-ground truth; not human-verified",
+  "domain": "drone",
+  "frame_index": 152,
+  "source_frame": "annotations_ai_50/drone/frame_0152.png",
+  "mask": "annotations_ai_50/drone/frame_0152_mask.png",
+  "gemini_model": "gemini-3.1-flash-lite",
+  "sam_model": "facebook/sam2.1-hiera-tiny",
+  "sam_device": "cpu",
+  "frame_usable_for_annotation": true,
+  "exclusion_reason": "",
+  "frame_has_relevant_obstacle": true,
+  "obstacles": [
+    {
+      "label": "metal overhead structure",
+      "relevance": "high",
+      "forward_path_reason": "The metal overhead structure directly occupies the central flight path.",
+      "box": [
+        2.5852500000000004e-05,
+        1.0967391304347826e-05,
+        0.6398687500000001,
+        0.8636666666666667
+      ],
+      "point": [
+        0.4175125,
+        0.3541413043478261
+      ],
+      "confidence": 0.98,
+      "box_pixels": [
+        0,
+        0,
+        1105,
+        963
+      ],
+      "point_pixels": [
+        721,
+        395
+      ],
+      "sam_candidate_scores": [
+        0.8005961179733276,
+        0.7829775214195251,
+        0.8319323062896729
+      ],
+      "sam_model_top_index": 2,
+      "sam_selected_index": 2,
+      "sam_mask_score": 0.8319323062896729,
+      "sam_inference_seconds": 0.6517902079795022,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0152_object_0.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 269687,
+      "mask_area_fraction": 0.13984665388955264
+    },
+    {
+      "label": "building roof",
+      "relevance": "high",
+      "forward_path_reason": "The roof in the foreground is in the path of the drone.",
+      "box": [
+        0.0,
+        0.5748695652173913,
+        0.48436875,
+        1.0
+      ],
+      "point": [
+        0.17619375,
+        0.7291739130434783
+      ],
+      "confidence": 0.95,
+      "box_pixels": [
+        0,
+        641,
+        837,
+        1115
+      ],
+      "point_pixels": [
+        304,
+        813
+      ],
+      "sam_candidate_scores": [
+        0.9486355781555176,
+        0.8002974390983582,
+        0.8832352161407471
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.9486355781555176,
+      "sam_inference_seconds": 0.6352298339770641,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0152_object_1.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 316195,
+      "mask_area_fraction": 0.1639634566241869
+    },
+    {
+      "label": "metal support beam",
+      "relevance": "medium",
+      "forward_path_reason": "Diagonal metal beam partially obstructing the lower right quadrant.",
+      "box": [
+        0.46464375,
+        0.6612826086956523,
+        1.0,
+        1.0
+      ],
+      "point": [
+        0.7171875,
+        0.8601521739130435
+      ],
+      "confidence": 0.9,
+      "box_pixels": [
+        802,
+        737,
+        1727,
+        1115
+      ],
+      "point_pixels": [
+        1239,
+        959
+      ],
+      "sam_candidate_scores": [
+        0.857831597328186,
+        0.6711957454681396,
+        0.7677373290061951
+      ],
+      "sam_model_top_index": 0,
+      "sam_selected_index": 0,
+      "sam_mask_score": 0.857831597328186,
+      "sam_inference_seconds": 0.6540487909805961,
+      "selected_mask_file": "annotations_ai_50/drone/frame_0152_object_2.png",
+      "accepted": true,
+      "rejection_reasons": [],
+      "mask_area_pixels": 195877,
+      "mask_area_fraction": 0.10157235248241073
+    }
+  ],
+  "valid_mask": true,
+  "usable_for_evaluation": true,
+  "flagged_for_review": false,
+  "review_reasons": [],
+  "final_mask_area_fraction": 0.4052740856896323
+}
